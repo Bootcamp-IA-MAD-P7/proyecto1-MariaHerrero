@@ -1,6 +1,12 @@
 # taximetro_MariaH
 import time
 import os
+import logging
+#Aqui metemos los logs
+logging.basicConfig(
+    filename="taximetro.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Aquí nos añade la fecha de las carreras #
 from datetime import datetime
@@ -120,6 +126,7 @@ Comandos disponibles:
             estado = 'parado'  # Iniciamos en estado 'parado'
             estado_inicio_carrera = time.time()
             print("La carrera ha comenzado. Estado inicial: 'parado' .")
+            logging.info("Carrera iniciada")
         elif command == "resumen_dia":
             total = sum(ingresos_dia)
             print(f"Total ganado hoy: €{total:.2f}")
@@ -142,6 +149,7 @@ Comandos disponibles:
             estado = 'parado' if command == "parado" else 'moviendonos'
             estado_inicio_carrera = time.time()
             print(f"El estado ha cambiado a '{estado}'.")
+            logging.info(f"Estado cambiado a {estado}")
 
             tarifa_actual = tarifa_en_vivo(tiempo_parado, tiempo_movimiento, precio_combustible)
             print(f"💰 Tarifa actual: €{tarifa_actual:.2f}")
@@ -179,6 +187,7 @@ Comandos disponibles:
             print(f"🟡 Tiempo parado: {tiempo_parado:.1f} segundos")
             print(f"🟢 Tiempo en movimiento: {tiempo_movimiento:.1f} segundos")
             print(f"💰 Factura total: €{tarifa_total:.2f}")
+            logging.info(f"Trayecto finalizado. Total: €{tarifa_total:.2f}")
 
             print("""
             ========================
@@ -189,6 +198,7 @@ Comandos disponibles:
             estado = None
         elif command == "salir":
             print("Saliendo del programa.¡Hasta mañana!")
+            logging.info("Programa cerrado")
             break
         
         else:
