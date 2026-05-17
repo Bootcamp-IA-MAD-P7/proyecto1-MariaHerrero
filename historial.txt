@@ -5,3 +5,21 @@ Parado: 3.5s | Movimiento: 70.9s | Total: €6.51
 Parado: 17.5s | Movimiento: 18.7s | Total: €2.38
 13/05/2026 14:22 | Parado: 6.6s | Movimiento: 86.0s | Total: €7.89
 16/05/2026 21:48 | Parado: 8.9s | Movimiento: 42.3s | Total: €4.35
+17/05/2026 11:15 | Parado: 7.6s | Movimiento: 14.3s | Total: €1.74
+17/05/2026 11:23 | Parado: 8.4s | Movimiento: 25.0s | Total: €4.26
+
+==============================
+📅 17/05/2026 11:29
+
+🟡 Tiempo parado: 7.3s
+🟢 Tiempo movimiento: 11.5s
+💰 Total: €1.45
+==============================
+
+==============================
+📅 17/05/2026 11:30
+
+🟡 Tiempo parado: 6.4s
+🟢 Tiempo movimiento: 14.1s
+💰 Total: €1.66
+==============================

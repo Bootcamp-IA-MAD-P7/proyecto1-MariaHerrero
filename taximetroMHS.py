@@ -10,9 +10,17 @@ logging.basicConfig(
 
 # Aquí nos añade la fecha de las carreras #
 from datetime import datetime
+TARIFA_PARADO = 0.02
+TARIFA_MOVIMIENTO = 0.05
 
 def limpiar_pantalla():
     os.system("cls")
+
+def mostrar_titulo(texto):
+
+    print("\n" + "=" * 40)
+    print(f"🚕 {texto}")
+    print("=" * 40)
 
 # Esta funcion nos sirve para guardar en un fichero el historial de las carreras #
 def guardar_historial(tiempo_parado, tiempo_movimiento, tarifa_total):
@@ -20,12 +28,13 @@ def guardar_historial(tiempo_parado, tiempo_movimiento, tarifa_total):
     fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
     with open("historial.txt", "a", encoding="utf-8") as archivo:
         
-        archivo.write(
-    f"{fecha} | "
-    f"Parado: {tiempo_parado:.1f}s | "
-    f"Movimiento: {tiempo_movimiento:.1f}s | "
-    f"Total: €{tarifa_total:.2f}\n"
-    )
+      archivo.write(
+    f"\n==============================\n"
+    f"📅 {fecha}\n\n"
+    f"🟡 Tiempo parado: {tiempo_parado:.1f}s\n"
+    f"🟢 Tiempo movimiento: {tiempo_movimiento:.1f}s\n"
+    f"💰 Total: €{tarifa_total:.2f}\n"
+    f"==============================\n")
 
 # Esta función muestra el historial guardado
 def mostrar_historial():
@@ -50,8 +59,8 @@ def calcula_tarifa(segundos_parado, segundos_movimiento, precio_combustible):
     -Parado: 0.02€/seg
     -Movimiento: 0.05€/seg
     """
-    tarifa_parado = 0.02 * precio_combustible
-    tarifa_movimiento = 0.05 * precio_combustible
+    tarifa_parado = TARIFA_PARADO * precio_combustible
+    tarifa_movimiento = TARIFA_MOVIMIENTO * precio_combustible
 
     tarifa = (segundos_parado * tarifa_parado + segundos_movimiento * tarifa_movimiento    )
     print(f"Este es el precio total: {tarifa}")
@@ -176,13 +185,7 @@ Comandos disponibles:
             guardar_historial(tiempo_parado, tiempo_movimiento, tarifa_total)
 
 
-            print("""
-            ========================
-              🚕 TAXÍMETRO
-            ========================
-
-            --- RESUMEN DEL VIAJE ---
-            """)
+            mostrar_titulo("RESUMEN DEL VIAJE")
 
             print(f"🟡 Tiempo parado: {tiempo_parado:.1f} segundos")
             print(f"🟢 Tiempo en movimiento: {tiempo_movimiento:.1f} segundos")
