@@ -136,17 +136,32 @@ Comandos disponibles:
             estado_inicio_carrera = time.time()
             print("La carrera ha comenzado. Estado inicial: 'parado' .")
             logging.info("Carrera iniciada")
-        elif command == "resumen_dia":
-            total = sum(ingresos_dia)
-            print(f"Total ganado hoy: €{total:.2f}")
         
-        elif command == "historial":
+        elif command == "resumen_dia":
+
+            mostrar_titulo("RESUMEN DEL DÍA")
+
+            total = sum(ingresos_dia)
+
+            cantidad_viajes = len(ingresos_dia)
+
+            if cantidad_viajes > 0:
+                media = total / cantidad_viajes
+            else:
+             media = 0
+
+            print(f"📦 Viajes realizados: {cantidad_viajes}")
+            print(f"💰 Total ganado: €{total:.2f}")
+            print(f"📊 Media por trayecto: €{media:.2f}")
+        
+        elif command == "historial": 
             mostrar_historial()
         
         elif command in ("parado", "moviendonos"):
             if not viaje_activo:
                 print ("Error: No se ha iniciado la carrera. Por favor inicie carrera primero")
                 continue
+            
             # Calcula el tiempo del estado anterior
             duracion = time.time() - estado_inicio_carrera
             if estado == 'parado':
