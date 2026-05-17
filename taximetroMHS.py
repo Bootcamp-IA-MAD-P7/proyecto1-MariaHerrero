@@ -99,10 +99,23 @@ Comandos disponibles:
 ====================================
 """)
     
-    
-    precio_combustible = float(input("Introduce el precio del combustible: "))
+ #Aqui ponemos el precio del combustible #
+    while True:
+
+        try:
+            precio_combustible = float(
+            input("Introduce el precio del combustible: ")
+        )
+
+            break
+
+        except ValueError:
+            print("❌ Debes introducir un número válido.")
+
     print(f"⛽ Combustible actual: €{precio_combustible}")
     print(f"Precio combustible actualizado: €{precio_combustible}")
+
+    
     viaje_activo = False
     inicio_carrera = 0
     tiempo_parado = 0
