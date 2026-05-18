@@ -125,41 +125,6 @@ Comandos disponibles:
 ====================================
 """)
     
-<<<<<<< HEAD
- #Aqui ponemos el precio del combustible #
-    while True:
-
-        try:
-            precio_combustible = float(
-            input("Introduce el precio del combustible: ")
-        )
-
-            break
-
-        except ValueError:
-            print("❌ Debes introducir un número válido.")
-
-    print(f"⛽ Combustible actual: €{precio_combustible}")
-    print(f"Precio combustible actualizado: €{precio_combustible}")
-
-    
-    viaje_activo = False
-    inicio_carrera = 0
-    tiempo_parado = 0
-    Fin_carrera = 0
-    tiempo_movimiento = 0
-    estado = None # 'parado' o 'moviendonos'
-    estado_inicio_carrera = 0
-    ingresos_dia = []
-    comandos_validos = [
-    "inicio",
-    "parado",
-    "moviendonos",
-    "findetrayecto",
-    "resumen_dia",
-    "historial",
-    "salir"]
-=======
     
     
 while True:
@@ -192,7 +157,6 @@ comandos_validos = [
 "resumen_dia",
 "historial",
 "salir"]
->>>>>>> feature/tests-tarifas
     
 
 while True:

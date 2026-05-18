@@ -25,45 +25,6 @@ Parado: 17.5s | Movimiento: 18.7s | Total: €2.38
 ==============================
 
 ==============================
-<<<<<<< HEAD
-📅 17/05/2026 21:49
-
-🟡 Tiempo parado: 32.5s
-🟢 Tiempo movimiento: 0.0s
-💰 Total: €1.24
-==============================
-
-==============================
-📅 17/05/2026 21:53
-
-🟡 Tiempo parado: 27.9s
-🟢 Tiempo movimiento: 0.0s
-💰 Total: €0.95
-==============================
-
-==============================
-📅 17/05/2026 21:59
-
-🟡 Tiempo parado: 12.7s
-🟢 Tiempo movimiento: 14.8s
-💰 Total: €1.89
-==============================
-
-==============================
-📅 17/05/2026 22:52
-
-🟡 Tiempo parado: 9.7s
-🟢 Tiempo movimiento: 20.6s
-💰 Total: €2.33
-==============================
-
-==============================
-📅 17/05/2026 22:56
-
-🟡 Tiempo parado: 14.1s
-🟢 Tiempo movimiento: 17.6s
-💰 Total: €1.74
-=======
 📅 18/05/2026 11:52
 
 🟡 Tiempo parado: 8.0s
@@ -101,5 +62,4 @@ Parado: 17.5s | Movimiento: 18.7s | Total: €2.38
 🟡 Tiempo parado: 10.2s
 🟢 Tiempo movimiento: 4.8s
 💰 Total: €0.75
->>>>>>> feature/tests-tarifas
 ==============================
