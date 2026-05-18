@@ -63,6 +63,14 @@ El programa permite iniciar trayectos, calcular tarifas en tiempo real, guardar 
 * Verificación del cálculo de tarifas
 
 ---
+# 📋 Historias de usuario
+
+## 📋 Documentación adicional
+
+- Historias de usuario: `historias_usuario.md`
+
+
+
 
 # 🛠️ Tecnologías utilizadas
 
